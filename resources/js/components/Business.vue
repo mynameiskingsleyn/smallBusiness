@@ -9,6 +9,9 @@
             </button>
             <modal :id="modalId" :title="bus.name">
                 <business-details :business="bus" :types="bustypes" @updated="refresh"></business-details>
+                <template #footer>
+                    <p>Update and use close button to close </p>
+                </template>
             </modal>
         </div>
         <div class="col-3">

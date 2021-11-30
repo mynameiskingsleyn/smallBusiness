@@ -19,14 +19,18 @@ class CreateBusinessesTable extends Migration
             $table->integer('user_id');
             $table->integer('website_id');
             $table->integer('b_type_id');
+            $table->string('email');
+            $table->string('phone');
             $table->string('Address1');
             $table->string('Address2')->nullable();
             $table->string('city');
             $table->string('state');
             $table->string('country')->default('USA');
             $table->string('zipcode');
+            $table->boolean('active')->default(true);
+            $table->string('status')->default('enabled');
             $table->timestamps();
-            $table->index(['name','zipcode']);
+            $table->index(['name','Address1','zipcode']);
         });
     }
 

@@ -2,10 +2,13 @@
 
 namespace App\Console\Commands;
 
+use App\Helpers\UserHelper;
 use Illuminate\Console\Command;
+use App\Traits\CacheTrait;
 
 class CronCacheClear extends Command
 {
+    use CacheTrait;
     /**
      * The name and signature of the console command.
      *
@@ -44,17 +47,17 @@ class CronCacheClear extends Command
 
     public function clearCache($cacheName = null)
     {
-        $cacheBase = null; ///$this->userHelper->zipcodeKeyBase;
-        if($cacheName){
-            $this->line('<-------------Clearing cache for '.$cacheName.' ---------------->');
-            $this->userHelper->cacheDelete($cacheName);
-        }else if($cacheBase){
-            //$this->line('what a joke');
-            $this->userHelper->bulkDelete($cacheBase);
-        } else{
-            $this->userHelper->cacheFlushAll();
-            $this->line('<-----------------clearing all cached items------------->');
-        }
+//        $cacheBase = null; ///$this->userHelper->zipcodeKeyBase;
+//        if($cacheName){
+//            $this->line('<-------------Clearing cache for '.$cacheName.' ---------------->');
+//            $this->cacheDelete($cacheName);
+//        }else if($cacheBase){
+//            //$this->line('what a joke');
+//            $this->bulkDelete($cacheBase);
+//        } else{
+//            $this->cacheFlushAll();
+//            $this->line('<-----------------clearing all cached items------------->');
+//        }
 
     }
 }

@@ -15,6 +15,6 @@ class pStyle extends BaseModelModel
     public function __construct()
     {
 
-        $this->etlFields = ['id'=>100,'name'=>100,'view_name'=>100];
+        $this->etlFields = ['id'=>100,'name'=>100,'view_name'=>100,'description'=>100,'image'=>100];
     }
 }

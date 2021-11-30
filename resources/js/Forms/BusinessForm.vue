@@ -39,7 +39,7 @@
             <input type="number" name="zip" class="form-control" v-model="businessZip">
         </div>
         <div>
-            <button @click="addBusiness" class="btn btn-primary">Submit</button>
+            <button @click="addBusiness" class="btn btn-primary" data-dismiss="modal">Submit</button>
         </div>
 
         <!-- <input type="file" name="avatar" value="" accept="image/*" @change="onChange"> -->

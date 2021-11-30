@@ -3,7 +3,7 @@
             <flash></flash>
             <div class="row">
                 <div class="col-12">
-                    hello {{currentUser.name}} you can manage your account here <br>
+                    hello {{currentUser.name}} you can manage your account here now. <br>
                     {{ businessSentence }}
 
                 </div>
@@ -29,17 +29,19 @@
 
 
 <script>
+
     import businessForm from '../Forms/BusinessForm';
     import businesses from './Businesses';
-    import modal from './Modal';
-    export default{
-        props:['user','btypes'],
-        components:{
-          businesses,businessForm,modal
-        },
 
-        data(){
-            return{
+  import modal from './Modal';
+  export default{
+      props:['user','btypes'],
+      components:{
+          businesses,businessForm,modal
+      },
+
+      data(){
+          return{
                 currentUser:this.user,
                 userbusinesses:this.user.businesses ? this.user.businesses: [],
                 showModal:true,
@@ -72,3 +74,6 @@
 
     }
 </script>
+<style>
+
+</style>

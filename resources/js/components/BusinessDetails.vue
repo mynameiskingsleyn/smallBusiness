@@ -1,4 +1,4 @@
-<template>
+<template #body>
     <div class="container">
         <div class="row mButtom-3">
             <div class="col-3">
@@ -84,9 +84,10 @@
             <div class="col-3">
             </div>
             <div class="col-9 text-center">
-                <button @click="update">
-                    submit
+                <button @click="update" data-dismiss="modal">
+                    Update
                 </button>
+
             </div>
         </div>
     </div>
@@ -145,14 +146,17 @@
                 var error_s=' can not be Empty';
                 for(var key in obj) {
                     var value = obj[key];
+                    value = String(value);
                     console.log(key);
-                    if(value.length < 1){
+                    if(value.trim() == ''){
                         if(dont.indexOf(key) != -1){
                             console.log('found key '+key);
                             continue;
                         }
+                        var first = key;
+                        first = first[0].toUpperCase()+first.slice(1);
 
-                        error = key+error_s;
+                        error = first+error_s;
                         return error;
                     }
                 }

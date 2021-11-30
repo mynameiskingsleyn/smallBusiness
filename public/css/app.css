@@ -10932,3 +10932,7 @@ a.text-dark:focus {
   margin-bottom: 3px;
 }
 
+.sbws-ul {
+  list-style-type: none;
+}
+

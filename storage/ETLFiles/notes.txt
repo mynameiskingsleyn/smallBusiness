@@ -1,0 +1,8 @@
+page style
+php artisan cron:Etl pstyle page_styles.csv pstyle
+
+zipcode
+php artisan cron:Etl zipcode us-zip-code.csv zipcode
+
+businesses
+php artisan cron:Etl btype business_types.csv businesstypes

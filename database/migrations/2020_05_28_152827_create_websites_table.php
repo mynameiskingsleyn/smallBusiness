@@ -23,10 +23,10 @@ class CreateWebsitesTable extends Migration
             $table->string('status')->default('enabled');
             $table->unsignedInteger('business_id');
 
-//            $table->foreign('business_id')
-//                    ->references('id')
-//                    ->on('businesses')
-//                    ->onDelete('set null');
+           // $table->foreign('business_id')
+           //         ->references('id')
+           //         ->on('businesses')
+           //         ->onDelete('set null');
 
             $table->timestamps();
         });

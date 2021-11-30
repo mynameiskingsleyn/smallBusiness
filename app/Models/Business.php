@@ -29,4 +29,14 @@ class Business extends BaseModelModel
         return $this->id;
     }
 
+    public function isActive()
+    {
+      return $this->isActive;
+    }
+
+    public function isEnabled()
+    {
+      return $this->enabled =="enabled";
+    }
+
 }

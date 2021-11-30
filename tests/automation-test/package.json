@@ -1,0 +1,20 @@
+{
+  "name": "sbws-automation-test",
+  "version": "1.0.0",
+  "description": "automation test for sbws",
+  "main": "conf.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jasmine-spec-reporter": "^7.0.0",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "",
+    "webdriver-update": "webdriver-manager update"
+  },
+  "author": "Kingsley Nwankwo",
+  "license": "ISC"
+}

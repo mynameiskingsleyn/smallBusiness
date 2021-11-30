@@ -1,0 +1,14 @@
+.footer-container{
+    margin-top: 20px;
+    color: gray;
+    background: gray;
+    color: white;
+}
+
+.footer-container ul li a{
+  color:white;
+}
+
+.footer-container ul li{
+  margin-top:10px;
+}

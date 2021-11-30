@@ -13,15 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/account','AccountController@index')->name('account');
-Route::get('/account/website/edit/{id}','WebsiteController@edit');
-Route::get('/account/website/{id}/view','WebsiteController@show');
-Route::get('/account/website/{id}/edit','WebsiteController@edit');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/members/account','Members\AccountController@index')->name('account');
+Route::get('/members/account/website/edit/{id}','Members\WebsiteController@edit');
+Route::get('/members/account/website/{id}/view','Members\WebsiteController@show');
+Route::get('/members/account/website/{id}/edit','Members\WebsiteController@edit');
+Route::get('/members', 'Members\MembersController@index')->name('members-home');
+Auth::routes();
+
+Route::get('/admin', 'AdminController@index')->name('admin-home');
+
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-

@@ -9,10 +9,10 @@
 
                 </div>
                 <div class="modal-body">
-                    <slot @businessAdded="close"></slot>
-                    <!--<business-form :user="currentUser" @businessAdded ="businessAdded"></business-form>-->
+                    <slot></slot>
                 </div>
                 <div class="modal-footer">
+                    <!--<slot name="footer"></slot>-->
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>

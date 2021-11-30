@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\pStyle;
+use App\Classes\ApiBuilders\PageStylesApiBuilder;
 
 class HomeController extends Controller
 {
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -23,6 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $pageStyleApi = new PageStylesApiBuilder();
+        $result = $pageStyleApi->get("","page_styles");
+        // $samplePages = pStyle::all();
+        // dd($result);
+        // dd($samplePages);
+        $data = null;
+        if($result['success']){
+          $data = $result['data'];
+        }
+        return view('home',['pages'=>$data]);
     }
 }

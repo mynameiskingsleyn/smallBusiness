@@ -17,6 +17,8 @@ class CreatePStylesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('view_name');
+            $table->text('description');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

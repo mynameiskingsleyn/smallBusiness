@@ -17,7 +17,7 @@ class CronEtlLoad extends Command
      */
     protected $signature = 'cron:Etl
                             {modelname: Name of the model}
-                            {filename: name of the file for etl} 
+                            {filename: name of the file for etl}
                             {type: what to call the operation}';
 
     /**
@@ -67,8 +67,8 @@ class CronEtlLoad extends Command
         }
 
         //$model = new Zipcode();
-        $filename =  $file ?? 'us-zip-code-test.csv';
-        $loading = $type ?? 'zipcode';
+        $filename =  $file ;//?? 'us-zip-code-test.csv';
+        $loading = $type;// ?? 'zipcode';
         $this->loadFileToDB($type, $model, $filename);
 
         $this->line("filename is $filename, model name is $modelName, option is $type ");

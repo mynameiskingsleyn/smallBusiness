@@ -29,4 +29,14 @@ class Website extends BaseModelModel
         $owner = $business->getOwner();
         return $owner;
     }
+
+    public function isActive()
+    {
+      return $this->isActive;
+    }
+
+    public function isEnabled()
+    {
+      return $this->enabled =="enabled";
+    }
 }

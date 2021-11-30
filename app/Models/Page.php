@@ -14,4 +14,21 @@ class Page extends BaseModelModel
     {
         return $this->hasMany(Image::class,'page_id');
     }
+
+    public function childPages()
+    {
+       return $this->hasMany(Page::class,'parent_id');
+    }
+
+    public function isActive()
+    {
+      return $this->isActive;
+    }
+
+    public function isEnabled()
+    {
+      return $this->enabled =="enabled";
+    }
+
+
 }
